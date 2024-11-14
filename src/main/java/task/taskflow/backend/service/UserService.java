@@ -1,8 +1,9 @@
 package task.taskflow.backend.service;
 
-import org.springframework.security.core.userdetails.User;
+
 import org.springframework.stereotype.Service;
 import task.taskflow.backend.repository.UserRepository;
+import task.taskflow.model.User;
 
 import java.util.Optional;
 

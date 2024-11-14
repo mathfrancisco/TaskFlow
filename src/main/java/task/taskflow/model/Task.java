@@ -11,7 +11,15 @@ public class Task {
     private Status status;
     private User assignee;
 
+
     // Getters, setters, construtores
     public enum Priority { LOW, MEDIUM, HIGH }
     public enum Status { TODO, IN_PROGRESS, DONE }
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
 }
