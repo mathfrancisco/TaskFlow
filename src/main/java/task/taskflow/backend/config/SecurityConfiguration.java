@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.config.Customizer;
 
 @Configuration
 @EnableWebSecurity
@@ -17,13 +18,12 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests()
-                .antMatchers("/api/tasks/**").hasRole("USER")
-                .anyRequest().authenticated()
-                .and()
-                .formLogin()
-                .and()
-                .logout();
+                .authorizeHttpRequests(authz -> authz
+                        .requestMatchers("/api/tasks/**").hasRole("USER")
+                        .anyRequest().authenticated()
+                )
+                .formLogin(Customizer.withDefaults()) // Usa o Customizer para configurações padrão
+                .logout(Customizer.withDefaults()); // Configura logout padrão
 
         return http.build();
     }
