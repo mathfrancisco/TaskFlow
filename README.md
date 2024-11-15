@@ -1,53 +1,40 @@
 🚀 Task Flow App
-Show Image Show Image Show Image Show Image Show Image
 📋 Kanban-style Task Management Application
 Backend • Frontend • Installation • Roadmap • License
+
 📋 About
-This task management application helps users organize their activities in a Kanban-style interface. It's ideal for professionals and teams tracking tasks, priorities, and deadlines visually.
+Este aplicativo de gerenciamento de tarefas ajuda os usuários a organizar suas atividades em uma interface estilo Kanban. Ideal para profissionais e equipes acompanharem tarefas, prioridades e prazos de maneira visual.
+
 🔙 Backend
 📋 Key Features
 📁 Task Boards
-
-Create and manage multiple boards
-Customizable columns (e.g., "To Do", "In Progress", "Done")
-
+Criação e gerenciamento de múltiplos quadros
+Colunas personalizáveis (e.g., "A Fazer", "Em Progresso", "Concluído")
 ➕ Task Creation & Editing
-
-Create tasks with title, description, due date, priority
-Assign team members
-
+Criação de tarefas com título, descrição, data de vencimento e prioridade
+Atribuição de membros da equipe
 🤖 Drag-and-Drop
-
-Move tasks between columns, updating status
-
+Mover tarefas entre colunas, atualizando status automaticamente
 🔍 Filtering & Search
-
-Filter by priority, status, assignee, due date
-Search by title or keywords
-
+Filtros por prioridade, status, responsável e data de vencimento
+Busca por título ou palavras-chave
 🔔 Notifications & Alerts
-
-Notify users of due/overdue tasks
-Alert assignees of changes
-
+Notificação de tarefas vencidas ou próximas do prazo
+Alerta aos responsáveis sobre alterações
 📊 Analytics Dashboard
-
-Charts for completed, in progress, overdue tasks
-Progress overview (daily, weekly, monthly)
-
+Gráficos de tarefas concluídas, em progresso e atrasadas
+Visão geral de progresso (diário, semanal, mensal)
 📜 Activity History
-
-Track task creation, movement, and edits
-
+Rastreamento de criação, movimentação e edição de tarefas
 🛠 Backend Stack
-
 Framework: Spring Boot 2.7
 Data: Hibernate, PostgreSQL
-Notifications: JavaMailSender, Spring Events, WebSocket
-Utilities: Lombok, ModelMapper, SLF4J
-
+Notificações: JavaMailSender, Spring Events, WebSocket
+Utilitários: Lombok, ModelMapper, SLF4J
 📁 Backend Structure
-Copytask-app-meta/
+plaintext
+Copiar código
+task-app-meta/
 ├── src/
 │   ├── main/
 │   │   ├── java/
@@ -73,7 +60,9 @@ Copytask-app-meta/
 🔜 Frontend
 📱 Vaadin Architecture
 📁 Frontend Structure
-Copytask-app/
+plaintext
+Copiar código
+task-app/
 ├── src/
 │   ├── main/
 │   │   ├── java/
@@ -94,25 +83,22 @@ Copytask-app/
 🧩 Main Components
 🖼️ KanbanBoardComponent
 
-Drag-and-drop task movement
-Customizable columns
-Real-time updates
-
+Movimentação de tarefas com drag-and-drop
+Colunas personalizáveis
+Atualizações em tempo real
 📅 CalendarComponent
 
-Task scheduling and availability
-Notification integration
-Reminders
-
+Agendamento de tarefas e visualização de disponibilidade
+Integração com notificações e lembretes
 📊 AnalyticsComponent
 
-Progress charts and graphs
-Overdue task monitoring
-Team workload visualization
-
+Gráficos de progresso e tarefas atrasadas
+Visualização de carga de trabalho da equipe
 📝 Form Validations
 📋 Task Creation Form
-typescriptCopyconst taskForm = {
+typescript
+Copiar código
+const taskForm = {
   title: ['', [Validators.required, Validators.minLength(3)]],
   description: [''],
   dueDate: ['', Validators.required],
@@ -121,46 +107,54 @@ typescriptCopyconst taskForm = {
 }
 🔄 Services
 🔔 NotificationService
-typescriptCopy@Injectable({
+typescript
+Copiar código
+@Injectable({
   providedIn: 'root'
 })
 export class NotificationService {
-  sendTaskReminder()
-  notifyAssigneeUpdates()
-  manageUserPreferences()
+  sendTaskReminder() {}
+  notifyAssigneeUpdates() {}
+  manageUserPreferences() {}
 }
 🚀 Installation
 Backend
-bashCopy# Clone the repository
+bash
+Copiar código
+# Clone o repositório
 git clone https://github.com/your-username/task-app-meta.git
 
-# Enter the backend directory
+# Entre no diretório do backend
 cd task-app-meta/src/main/java/com/example/taskappmeta/backend
 
-# Set up the environment
+# Configure o ambiente
 cp .env.example .env
 
-# Install dependencies
+# Instale as dependências
 ./mvnw install
 
-# Start the application
+# Inicie a aplicação
 ./mvnw spring-boot:run
 Frontend
-bashCopy# Enter the frontend directory
+bash
+Copiar código
+# Entre no diretório do frontend
 cd ../../../../../../../task-app
 
-# Install dependencies
+# Instale as dependências
 mvn clean install
 
-# Start the application
+# Inicie a aplicação
 mvn vaadin:run
 ⚙️ Required Configurations
-propertiesCopy# application.properties
+properties
+Copiar código
+# application.properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/task_db
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 
-# Email Configurations
+# Configurações de email
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
 spring.mail.username=your_email@gmail.com
@@ -169,20 +163,17 @@ spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 📈 Roadmap
 Backend
-
- Caching
- Swagger docs
- Integration tests
- Email templates
- SMS integration
-
+Caching
+Swagger docs
+Integration tests
+Email templates
+SMS integration
 Frontend
-
- Hilla state management
- Push notifications
- Admin dashboard
- Advanced reporting
- Mobile app
-
+Hilla state management
+Push notifications
+Admin dashboard
+Advanced reporting
+Mobile app
 📄 License
-This project is licensed under the MIT License.
+Este projeto está licenciado sob a MIT License.
+
