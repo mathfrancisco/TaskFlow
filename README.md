@@ -76,22 +76,27 @@ task-app-meta/
 │                   └── taskappmeta/
 ├── pom.xml
 └── README.md
-🧩 Main Components
-🖼️ KanbanBoardComponent
+```
+---
+### 🧩 Main Components
 
+### 🖼️ KanbanBoardComponent
 Movimentação de tarefas com drag-and-drop
 Colunas personalizáveis
 Atualizações em tempo real
-📅 CalendarComponent
-
+### 📅 CalendarComponent
 Agendamento de tarefas e visualização de disponibilidade
 Integração com notificações e lembretes
-📊 AnalyticsComponent
+
+### 📊 AnalyticsComponent
 
 Gráficos de progresso e tarefas atrasadas
 Visualização de carga de trabalho da equipe
-📝 Form Validations
-📋 Task Creation Form
+
+### 📝 Form Validations
+
+### 📋 Task Creation Form
+
 typescript
 Copiar código
 const taskForm = {
@@ -101,8 +106,10 @@ const taskForm = {
   priority: ['', Validators.required],
   assignees: [[], Validators.required]
 }
-🔄 Services
-🔔 NotificationService
+
+### 🔄 Services
+
+### 🔔 NotificationService
 typescript
 Copiar código
 @Injectable({
@@ -113,7 +120,9 @@ export class NotificationService {
   notifyAssigneeUpdates() {}
   manageUserPreferences() {}
 }
-🚀 Installation
+
+### 🚀 Installation
+
 Backend
 bash
 Copiar código
@@ -142,7 +151,7 @@ mvn clean install
 
 # Inicie a aplicação
 mvn vaadin:run
-⚙️ Required Configurations
+### ⚙️ Required Configurations
 properties
 Copiar código
 # application.properties
@@ -157,7 +166,8 @@ spring.mail.username=your_email@gmail.com
 spring.mail.password=your_password
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
-📈 Roadmap
+
+### 📈 Roadmap
 Backend
 Caching
 Swagger docs
@@ -170,6 +180,3 @@ Push notifications
 Admin dashboard
 Advanced reporting
 Mobile app
-📄 License
-Este projeto está licenciado sob a MIT License.
-
