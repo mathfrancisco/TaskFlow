@@ -1,39 +1,58 @@
-🚀 Task Flow App
-📋 Kanban-style Task Management Application
-Backend • Frontend • Installation • Roadmap • License
+# 🚀 Task Flow App  
 
-📋 About
-Este aplicativo de gerenciamento de tarefas ajuda os usuários a organizar suas atividades em uma interface estilo Kanban. Ideal para profissionais e equipes acompanharem tarefas, prioridades e prazos de maneira visual.
+📋 **Kanban-style Task Management Application**  
+Backend • Frontend • Installation • Roadmap • License  
 
-🔙 Backend
-📋 Key Features
-📁 Task Boards
-Criação e gerenciamento de múltiplos quadros
-Colunas personalizáveis (e.g., "A Fazer", "Em Progresso", "Concluído")
-➕ Task Creation & Editing
-Criação de tarefas com título, descrição, data de vencimento e prioridade
-Atribuição de membros da equipe
-🤖 Drag-and-Drop
-Mover tarefas entre colunas, atualizando status automaticamente
-🔍 Filtering & Search
-Filtros por prioridade, status, responsável e data de vencimento
-Busca por título ou palavras-chave
-🔔 Notifications & Alerts
-Notificação de tarefas vencidas ou próximas do prazo
-Alerta aos responsáveis sobre alterações
-📊 Analytics Dashboard
-Gráficos de tarefas concluídas, em progresso e atrasadas
-Visão geral de progresso (diário, semanal, mensal)
-📜 Activity History
-Rastreamento de criação, movimentação e edição de tarefas
-🛠 Backend Stack
-Framework: Spring Boot 2.7
-Data: Hibernate, PostgreSQL
-Notificações: JavaMailSender, Spring Events, WebSocket
-Utilitários: Lombok, ModelMapper, SLF4J
-📁 Backend Structure
-plaintext
-Copiar código
+---
+
+## 📋 About  
+Este aplicativo de gerenciamento de tarefas ajuda os usuários a organizar suas atividades em uma interface estilo Kanban. Ideal para profissionais e equipes acompanharem tarefas, prioridades e prazos de maneira visual.  
+
+---
+
+## 🔙 Backend  
+
+### 📋 Key Features  
+
+#### 📁 Task Boards  
+- Criação e gerenciamento de múltiplos quadros  
+- Colunas personalizáveis (e.g., "A Fazer", "Em Progresso", "Concluído")  
+
+#### ➕ Task Creation & Editing  
+- Criação de tarefas com título, descrição, data de vencimento e prioridade  
+- Atribuição de membros da equipe  
+
+#### 🤖 Drag-and-Drop  
+- Mover tarefas entre colunas, atualizando status automaticamente  
+
+#### 🔍 Filtering & Search  
+- Filtros por prioridade, status, responsável e data de vencimento  
+- Busca por título ou palavras-chave  
+
+#### 🔔 Notifications & Alerts  
+- Notificação de tarefas vencidas ou próximas do prazo  
+- Alerta aos responsáveis sobre alterações  
+
+#### 📊 Analytics Dashboard  
+- Gráficos de tarefas concluídas, em progresso e atrasadas  
+- Visão geral de progresso (diário, semanal, mensal)  
+
+#### 📜 Activity History  
+- Rastreamento de criação, movimentação e edição de tarefas  
+
+---
+
+### 🛠 Backend Stack  
+- **Framework**: Spring Boot 2.7  
+- **Data**: Hibernate, PostgreSQL  
+- **Notificações**: JavaMailSender, Spring Events, WebSocket  
+- **Utilitários**: Lombok, ModelMapper, SLF4J  
+
+---
+
+## 📁 Backend Structure  
+
+```plaintext
 task-app-meta/
 ├── src/
 │   ├── main/
@@ -57,29 +76,6 @@ task-app-meta/
 │                   └── taskappmeta/
 ├── pom.xml
 └── README.md
-🔜 Frontend
-📱 Vaadin Architecture
-📁 Frontend Structure
-plaintext
-Copiar código
-task-app/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── example/
-│   │   │           └── taskapp/
-│   │   │               ├── ui/
-│   │   │               │   ├── components/
-│   │   │               │   └── views/
-│   │   │               └── service/
-│   │   └── resources/
-│   └── test/
-│       └── java/
-│           └── com/
-│               └── example/
-│                   └── taskapp/
-└── pom.xml
 🧩 Main Components
 🖼️ KanbanBoardComponent
 
