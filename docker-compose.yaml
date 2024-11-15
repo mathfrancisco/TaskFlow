@@ -12,20 +12,12 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U taskflow_user -d taskflow"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
     networks:
       - taskflow-network
     restart: unless-stopped
 
 volumes:
   postgres_data:
-    name: taskflow-postgres-data
 
 networks:
   taskflow-network:
-    name: taskflow-network
-    driver: bridge

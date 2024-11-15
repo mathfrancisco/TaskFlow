@@ -1,5 +1,4 @@
 package task.taskflow.frontend.view;
-
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.formlayout.FormLayout;
@@ -28,15 +27,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import task.taskflow.backend.service.TaskService;
 import task.taskflow.model.Task;
 import task.taskflow.model.User;
-
 import java.time.LocalDate;
-
 @SpringComponent
 @UIScope
 @Route("tasks")
 @PermitAll
 public class TasksView extends VerticalLayout implements BeforeEnterObserver {
-
     private final TaskService taskService;
     private Dialog taskDialog;
     private HorizontalLayout kanbanColumns;
@@ -230,5 +226,4 @@ public class TasksView extends VerticalLayout implements BeforeEnterObserver {
                 || !SecurityContextHolder.getContext().getAuthentication().isAuthenticated()) {
             event.forwardTo(LoginView.class);
         }
-    }
-}
+    }}

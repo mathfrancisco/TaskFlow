@@ -16,7 +16,6 @@ import task.taskflow.model.User;
 @Route("register")
 @AnonymousAllowed
 public class RegisterView extends VerticalLayout {
-
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
 

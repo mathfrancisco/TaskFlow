@@ -8,7 +8,6 @@ import task.taskflow.backend.repository.UserRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
-
     private final UserRepository userRepository;
 
     public CustomUserDetailsService(UserRepository userRepository) {
